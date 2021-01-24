@@ -1,5 +1,6 @@
 
 exports.userCreate = (req, res, next)=>{
+    console.log(process.env.KEY)
     res.render('login')
     next()
 }
