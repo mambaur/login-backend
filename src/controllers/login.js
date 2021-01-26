@@ -1,11 +1,13 @@
-
-exports.userCreate = (req, res, next)=>{
-    console.log(process.env.KEY)
-    res.render('login')
-    next()
+const user = {
+    "username" : "admin",
+    "password" : "admin"
 }
 
-exports.userStore = (req, res, next)=>{
+exports.userCreate = (req, res)=>{
+    console.log(user)
+    res.render('login')
+}
+
+exports.userStore = (req, res)=>{
     res.send('Store Login')
-    next()
 }
