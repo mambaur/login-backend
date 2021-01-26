@@ -1,5 +1,6 @@
 const LocalStrategy = require('passport-local').Strategy
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const FacebookStrategy = require('passport-facebook').Strategy;
 const User = require('../src/models/user')
 const passport = require('passport')
 
@@ -30,6 +31,21 @@ passport.use(new GoogleStrategy({
     // User.findOrCreate({ googleId: profile.id }, function (err, user) {
     //   return cb(err, user);
     // });
+    cb(null, profile)
+  }
+));
+
+passport.use(new FacebookStrategy({
+    clientID: '4992344704170645',
+    clientSecret: 'f7ac8fe649e41dd431ec33bd43d80b7e',
+    callbackURL: "https://login-third-party.herokuapp.com/login/auth/facebook/callback",
+    profileFields: ['id', 'displayName', 'photos', 'email']
+  },
+  function(accessToken, refreshToken, profile, cb) {
+    // User.findOrCreate({ facebookId: profile.id }, function (err, user) {
+    //   return cb(err, user);
+    // });
+    console.log(profile)
     cb(null, profile)
   }
 ));
