@@ -13,7 +13,7 @@ exports.storeRegister = (req, res)=>{
         id: Date.now().toString(),
         username: req.body.username,
         password: req.body.password,
-        name: req.body.name
+        displayName: req.body.name
     })
     console.log(users)
     res.redirect('/login')

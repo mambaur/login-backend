@@ -17,6 +17,9 @@
     <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon.ico">
     <meta name="theme-color" content="#7952b3">
 
+    <!-- Font awesome -->
+    <script src="https://use.fontawesome.com/55388d2304.js"></script>
+
     <title>Login Page!</title>
 
     <!-- Custom styles for this template -->
@@ -52,11 +55,17 @@
           <label for="inputPassword" class="visually-hidden">Password</label>
           <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
           <button class="w-100 btn btn-lg btn-primary mb-2" type="submit">Sign in</button>
-          <div class="mb-1">Or</div>
-          <button class="w-100 btn btn-lg mb-1 btn-outline-secondary" type="submit">Sign in with Google</button>
-          <button class="w-100 btn btn-lg mb-1 btn-outline-secondary" type="submit">Sign in with Facebook</button>
-          <p class="mt-5 mb-3 text-muted">&copy; 2021 | <a href="/register">Create account</a></p>
+          <div class="mb-1">Or signin with</div>
         </form>
+        <div class="row">
+          <div class="col-sm">
+            <a href="/google"><button class="w-100 mb-1 btn btn-lg btn-outline-secondary"><i class="fa fa-google" aria-hidden="true"></i> Google</button></a>
+          </div>
+          <div class="col-sm">
+            <a href="/google"><button class="w-100 mb-1 btn btn-lg btn-outline-secondary"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</button></a>
+          </div>
+        </div>
+        <p class="mt-5 mb-3 text-muted">&copy; 2021 | <a href="/register">Create account</a></p>
      </main>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

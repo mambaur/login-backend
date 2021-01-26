@@ -4,13 +4,13 @@ const User = [
         "id" : 1,
         "username" : "admin",
         "password" : "admin",
-        "name" : "Mambaur Roziq Alwi"
+        "displayName" : "Mambaur Roziq Alwi"
     },
     {
         "id": 2,
         "username" : "user",
         "password" : "user",
-        "name" : "Fina Bela Qori"
+        "displayName" : "Fina Bela Qori"
     },
 ]
 
